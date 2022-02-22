@@ -1,0 +1,27 @@
+object SourcesFrame: TSourcesFrame
+  Align = Client
+  Size.Width = 1039.000000000000000000
+  Size.Height = 615.000000000000000000
+  Size.PlatformDefault = False
+  object BasePanel: TPanel
+    Align = Client
+    Size.Width = 1039.000000000000000000
+    Size.Height = 615.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LeftPanel: TPanel
+      Align = Left
+      Size.Width = 300.000000000000000000
+      Size.Height = 615.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+    object RightPanel: TPanel
+      Align = Client
+      Size.Width = 739.000000000000000000
+      Size.Height = 615.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+end

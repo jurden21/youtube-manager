@@ -9,6 +9,7 @@ object MainForm: TMainForm
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnCloseQuery = FormCloseQuery
   OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object MainMenu: TMainMenu
@@ -22,11 +23,139 @@ object MainForm: TMainForm
         OnClick = ExitMenuItemClick
       end
     end
+    object ViewMenuItem: TMenuItem
+      Text = 'View'
+      object SourcesMenuItem: TMenuItem
+        Locked = True
+        AutoCheck = True
+        GroupIndex = 1
+        RadioItem = True
+        IsChecked = True
+        Text = 'Sources'
+        OnClick = SourcesMenuItemClick
+      end
+      object CategoriesMenuItem: TMenuItem
+        Locked = True
+        AutoCheck = True
+        GroupIndex = 1
+        RadioItem = True
+        Text = 'Categories'
+        OnClick = CategoriesMenuItemClick
+      end
+      object TagsMenuItem: TMenuItem
+        Locked = True
+        AutoCheck = True
+        GroupIndex = 1
+        RadioItem = True
+        Text = 'Tags'
+        OnClick = TagsMenuItemClick
+      end
+      object VideosMenuItem: TMenuItem
+        Locked = True
+        AutoCheck = True
+        GroupIndex = 1
+        RadioItem = True
+        Text = 'Videos'
+        OnClick = VideosMenuItemClick
+      end
+    end
   end
   object ToolBar: TToolBar
     Size.Width = 991.000000000000000000
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
+  end
+  object MainTabControl: TTabControl
+    Align = Client
+    Size.Width = 991.000000000000000000
+    Size.Height = 635.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 4
+    TabPosition = PlatformDefault
+    Sizes = (
+      991s
+      609s
+      991s
+      609s
+      991s
+      609s
+      991s
+      609s)
+    object SourcesTabItem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 62.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Sources'
+    end
+    object CategoriesTabItem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 77.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Categories'
+      object Label2: TLabel
+        Position.X = 300.000000000000000000
+        Position.Y = 218.000000000000000000
+        Text = 'Label2'
+        TabOrder = 0
+      end
+    end
+    object TagsTabItem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Tags'
+      object Label3: TLabel
+        Position.X = 388.000000000000000000
+        Position.Y = 218.000000000000000000
+        Text = 'Label3'
+        TabOrder = 0
+      end
+    end
+    object VideosTabItem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 56.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Videos'
+      object Label4: TLabel
+        Position.X = 380.000000000000000000
+        Position.Y = 238.000000000000000000
+        Text = 'Label4'
+        TabOrder = 0
+      end
+    end
+  end
+  object StatusBar: TStatusBar
+    Position.Y = 675.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 991.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
   end
 end
