@@ -1,0 +1,32 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Youtube Manager'
+  ClientHeight = 697
+  ClientWidth = 991
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object MainMenu: TMainMenu
+    Left = 400
+    Top = 88
+    object ApplicationMenuItem: TMenuItem
+      Text = 'Application'
+      object ExitMenuItem: TMenuItem
+        Locked = True
+        Text = 'Exit'
+        OnClick = ExitMenuItemClick
+      end
+    end
+  end
+  object ToolBar: TToolBar
+    Size.Width = 991.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+end
