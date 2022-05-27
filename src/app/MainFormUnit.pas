@@ -28,12 +28,12 @@ type
         VideosMenuItem: TMenuItem;
         procedure FormCreate(Sender: TObject);
         procedure FormDestroy(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
-    procedure ExitMenuItemClick(Sender: TObject);
-    procedure SourcesMenuItemClick(Sender: TObject);
-    procedure CategoriesMenuItemClick(Sender: TObject);
-    procedure TagsMenuItemClick(Sender: TObject);
-    procedure VideosMenuItemClick(Sender: TObject);
+        procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+        procedure ExitMenuItemClick(Sender: TObject);
+        procedure SourcesMenuItemClick(Sender: TObject);
+        procedure CategoriesMenuItemClick(Sender: TObject);
+        procedure TagsMenuItemClick(Sender: TObject);
+        procedure VideosMenuItemClick(Sender: TObject);
     private
         { Private declarations }
     public
